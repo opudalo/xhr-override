@@ -11,7 +11,7 @@ window.XHROverride = function (cfg) {
   }
 
   function overrideMethod(original, name, cb) {
-    window.XMLHttpRequest.prototype[method] = function () {
+    window.XMLHttpRequest.prototype[name] = function () {
       var args = [].slice.call(arguments)
       cb.apply(this, args)
       return original.apply(this, args)
