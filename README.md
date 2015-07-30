@@ -5,6 +5,8 @@
 Include a script into a webpage:  
 `<script src="index.js"></script>`
 
+## [Demo](http://opudalo.github.io/xhr-override/).
+
 ## Usage example
 
 ```js
