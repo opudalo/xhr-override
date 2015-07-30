@@ -1,33 +1,7 @@
 <html>
   <head> 
     <script src="index.js"></script>
-    <script>
-      window.onload = function () {
-        XHROverride({
-          methods: {
-            send: function () {
-              console.log('open:', arguments)
-            },
-            open: function () {
-              console.log('send:', arguments)
-            }
-          },
-          listeners: {
-            readystatechange: function () {
-              console.log('onreadystatechange:', this.readyState)
-            }
-          }
-        })
-
-        var xhr = new XMLHttpRequest()
-        xhr.open("GET", "http://www.example.org/ajax.php", true);
-        xhr.onreadystatechange = function () {
-          console.log('readystate changed')
-        }
-        xhr.onload = function () {}
-        xhr.send()
-      }
-    </script>
+    <script src="usage.js"></script>
   </head>
   <body>
     <h1>XmlHttpRequest methods override example</h1>
@@ -48,15 +22,7 @@
           }
         }
       })
-
-      var xhr = new XMLHttpRequest()
-        xhr.open("GET", "http://www.example.org/ajax.php", true);
-        xhr.onreadystatechange = function () {
-          console.log('readystate changed')
-        }
-        xhr.onload = function () {}
-        xhr.send()
-
     </pre>
+    <pre id="result"></pre>
   </body>
 </html>
